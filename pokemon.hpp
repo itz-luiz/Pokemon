@@ -12,6 +12,7 @@ public:
 
     void ataque(Pokemon* pokemon, int ataque, Pokemon* pokemon2);
     void gameStatus(int damage, Pokemon* pokemon, Pokemon* pokemon2); // imprime "<nome> defendeu com Y de resistencia"
+    Pokemon* escolherPokemon(Pokemon* pokemon);
 
     Pokemon(){
         nome = "";
@@ -28,3 +29,5 @@ public:
         // speed = s; 
     }
 };
+
+void batalhaPokemon();
