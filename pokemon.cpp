@@ -22,8 +22,8 @@ void Pokemon::gameStatus(int damage, Pokemon* pokemon, Pokemon* pokemon2){
 
 Pokemon* Pokemon::escolherPokemon(Pokemon* pokemon){
     int escolha;
-
-    cout << endl << "0 - Sair do jogo";
+    
+    do{
     cout << endl << "1 - Charmander";
     cout << endl << "2 - Squirtle";
     cout << endl << "3 - Bulbassaur";
@@ -32,16 +32,18 @@ Pokemon* Pokemon::escolherPokemon(Pokemon* pokemon){
     cout << endl << endl << "Sua escolha: ";
     cin >> escolha;
 
-    switch(escolha){
-        case 1: pokemon = new Pokemon("Charmander", 100, 30, 10);
-        break;
-        case 2: pokemon = new Pokemon("Squirtle", 100, 25, 15);
-        break;
-        case 3: pokemon = new Pokemon("Bulbassaur", 120, 20, 20);
-        break;
-        case 4: pokemon = new Pokemon("Pikachu", 90, 35, 10);
-        break;
-    }
-
+        switch(escolha){
+            case 1: pokemon = new Pokemon("Charmander", 100, 30, 10);
+            break;
+            case 2: pokemon = new Pokemon("Squirtle", 100, 25, 15);
+            break;
+            case 3: pokemon = new Pokemon("Bulbassaur", 120, 20, 20);
+            break;
+            case 4: pokemon = new Pokemon("Pikachu", 90, 35, 10);
+            break;
+            default: cout << endl << "Opcao invalida. Tente novamente." << endl;
+        }
+    } while(escolha < 1 || escolha > 4);
+        
     return pokemon;
 }

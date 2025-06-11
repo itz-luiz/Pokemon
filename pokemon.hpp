@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+#define _numPokemon 3
+
 class Pokemon
 {
 public:

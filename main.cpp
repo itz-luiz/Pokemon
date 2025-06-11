@@ -2,15 +2,25 @@
 #include <iostream>
 
 int main(){
-    Pokemon* P1[3];
-    Pokemon* P2[3];
+    Pokemon *P1[_numPokemon];
+    Pokemon *P2[_numPokemon];
 
-    // P1[0] = new Pokemon("Charmander", 100, 30, 10);
-    // P2[0] = new Pokemon("Squirtle", 100, 20, 15);
+    // Escolha de Pokémons
 
+    // Jogador 1
+    cout << endl << "Escolha de Pokemons do jogador 1" << endl;
+    for (int i = 0; i < _numPokemon; i++){
+        cout << endl << "Pokemon " << i + 1;
+        P1[i] = P1[i]->escolherPokemon(P1[i]);
+    }
 
-    // P2[0]->ataque(P1[0], P2[0]->attack, P2[0]);
-    P1[0] = P1[0]->escolherPokemon(P1[0]);
+    // Jogador 2
+    cout << endl << "Escolha de Pokemons do jogador 2" << endl;
+    for (int i = 0; i < _numPokemon; i++){
+        cout << endl << "Pokemon " << i + 1;
+        P2[i] = P2[i]->escolherPokemon(P2[i]);
+    }
     
-    cout << endl << P1[0]->nome;
+    // P2[0]->ataque(P1[0], P2[0]->attack, P2[0]);
+    // cout << endl << P1[0]->nome;
 }
